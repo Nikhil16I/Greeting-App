@@ -9,6 +9,26 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+    public User() {
+
+    }
+    //Tostring
+    @Override
+    public String toString() {
+        String str = (firstName != null) ? firstName + " " : "";
+        str += (lastName != null) ? lastName : "";
+        return str.trim();
+    }
+//Setter
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+//Getter
     public String getFirstName() {
         return firstName;
     }
@@ -17,3 +37,4 @@ public class User {
         return lastName;
     }
 }
+

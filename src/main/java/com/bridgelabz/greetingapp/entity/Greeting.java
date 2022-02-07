@@ -1,6 +1,13 @@
 package com.bridgelabz.greetingapp.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="GREETINGS")
 public class Greeting {
+    @Id
     private final long id;
     private final String message;
 
@@ -10,6 +17,11 @@ public class Greeting {
         this.message = message;
     }
 
+    public Greeting() {
+        id = 0;
+        message = "";
+    }
+
     public long getId() {
         return id;
     }
@@ -17,4 +29,4 @@ public class Greeting {
     public String getMessage() {
         return message;
     }
-}
+ }
